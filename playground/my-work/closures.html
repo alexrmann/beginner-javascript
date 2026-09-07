@@ -9,17 +9,35 @@
 
   <body>
     <script>
-      function outer() {
-        const outerVar = 'Hey I am the outer var';
-        function inner() {
-          const innerVar = 'Hey I am an inner var';
-          console.log(innerVar);
-          console.log(outerVar);
-        }
-        return inner;
+      // // Initial Closure Example
+      // 
+      // function outer() {
+      //   const outerVar = 'Hey I am the outer var';
+      //   function inner() {
+      //     const innerVar = 'Hey I am an inner var';
+      //     console.log(innerVar);
+      //     console.log(outerVar);
+      //   }
+      //   return inner;
+      // }
+      // const innerFn = outer();
+      // innerFn();
+
+      function createGreeting(greeting = "") {
+        const myGreet = greeting.toUpperCase();
+
+        return function (name) {
+          return `${myGreet} ${name}`;
+        };
       }
-      const innerFn = outer();
-      innerFn();
+
+      // // Now, call the following in console or uncomment.
+      //
+      // const sayHello = createGreeting('hello');
+      // const sayHey = createGreeting('hey');
+      // console.log(sayHello('wes'));
+      // console.log(sayHello('kait'));
+      // console.log(sayHey('kait'));
     </script>
   </body>
 </html>
