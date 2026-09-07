@@ -38,6 +38,28 @@
       // console.log(sayHello('wes'));
       // console.log(sayHello('kait'));
       // console.log(sayHey('kait'));
+
+      function createGame(gameName) {
+        let score = 0;
+
+        return function win() {
+          score ++;
+          return `Your name ${gameName} score is ${score}`;
+        };
+      }
+
+      const hockeyGame = createGame('Hockey');
+      const baseballGame = createGame('Baseball');
+
+      // // Now, call the following in console or uncomment.
+      //
+      // hockeyGame();
+      // hockeyGame();
+      // baseballGame();
+      // baseballGame();
+      // baseballGame();
+      // baseballGame();
+      // hockeyGame();
     </script>
   </body>
 </html>
