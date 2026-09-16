@@ -9,7 +9,44 @@
 
   <body>
     <script>
-      console.log('hey');
+      // 'use strict'; // prevents untyped variables, strict equivalence, etc.
+
+      // variable declaration statements
+      var first = 'wes'; // function scoped
+      
+      let age = 69; // block scoped
+      const cool = true; // block scoped
+
+      // Wes' convention is to default to declaring a variable as a const (if it is never reassigned, it is appropriate), and use let if you know you need it to be reassigned, otherwise change your const if you decide later that it should be reassigned.
+
+      console.log(first); // function call statement
+
+      // reassignment
+      age = 9;
+      first = 'westerhoff';
+      
+      // A block statement
+      if (age > 10) {
+        console.log('You are old');
+      } else {
+        console.log('Too young');
+      }
+
+      // Javascript is case sensitive. These two variables are different.
+
+      dog = 'doggie'; // works if 'use strict' is not declared
+
+      const Dog = 'retriever'; // This works, but capitalization of variables should be reserved for classes, per convention. 'use strict' prevents this from working.
+
+      // camel case
+      const iLovePizza = true;
+      // UpperCamelCase
+      const ILoveToEatHotDogs = false;
+      // snake case!!
+      const this_is_snake_case = 'cool';
+      // kebab case is invalid and will throw an error
+      const this-is-kebab-case = 'shawarma';
+      
     </script>
   </body>
 </html>
